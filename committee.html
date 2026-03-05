@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Committee | ISTE Telangana Section</title>
+
+    <link rel="stylesheet" type="text/css" href="css/lib.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            color: #222;
+        }
+
+        /* ===== LOGO SECTION (Same as Index) ===== */
+        .logo-wrapper {
+            background: #ffffff;
+            padding: 0px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .site-logo {
+            display: block;
+            margin: auto;
+            max-height: 110px;
+            width: auto;
+        }
+
+        @media(max-width:600px) {
+            .site-logo {
+                max-height: 80px;
+            }
+        }
+
+        /* ===== NAVBAR (Exact Index Color) ===== */
+        .ow-navigation {
+            background: #0c0474 !important;
+            border: 0px !important;
+            margin-bottom: 0px !important;
+        }
+
+        /* Sticky Navbar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        /* Center Menu */
+        .navbar-nav {
+            float: none !important;
+            display: inline-block;
+        }
+
+        /* Mobile submenu */
+        @media (max-width: 767px) {
+
+            .about-menu .dropdown-menu {
+                display: none;
+                background: #0c0474;
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-menu .dropdown-menu li a {
+                color: #fff;
+                padding: 10px 0;
+                display: block;
+            }
+
+            .mobile-arrow {
+                margin-left: 5px;
+                cursor: pointer;
+            }
+
+            .navbar-collapse {
+                background: #0c0474;
+            }
+        }
+
+        /* ===== MAROON BAR ===== */
+        .maroon-strip {
+            background: #FFF9C4;
+            /* Light Yellow */
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ECB200;
+        }
+
+        .scrolling-notification {
+            white-space: nowrap;
+            animation: scroll-left 20s linear infinite;
+            padding-left: 100%;
+            display: inline-block;
+        }
+
+        .scrolling-notification a {
+            color: #FF0000;
+            /* Red */
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Committee Section */
+        .committee-container {
+            margin: 50px auto;
+            max-width: 1100px;
+        }
+
+        .committee-title {
+            text-align: center;
+            font-weight: 700;
+            color: #0c0474;
+            margin-bottom: 40px;
+        }
+
+        .member-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-name {
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .member-role {
+            color: #8C2138;
+            font-weight: 500;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="container-fluid no-padding">
+        <div class="logo-wrapper">
+            <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Section Logo">
+        </div>
+
+        <div class="container-fluid no-padding sticky-nav">
+            <nav class="navbar navbar-default ow-navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse text-center" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown about-menu">
+                            <a href="introduction.html">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="introduction.html">Introduction</a></li>
+                                <li><a href="objective.html">ISTE Objective</a></li>
+                                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
+                                <li><a href="management.html">Management</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="committee.html">Committee</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="awards.html">Awards</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="maroon-strip">
+        <div class="scrolling-notification">
+            <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for
+                upcoming technical workshops and events.</a>
+        </div>
+    </div>
+
+    <!-- COMMITTEE CONTENT -->
+    <div class="container committee-container">
+
+        <h1 class="committee-title">Executive Committee – ISTE Telangana Section</h1>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="member-card">
+                    <div class="member-name">Dr. XXXXX XXXXX</div>
+                    <div class="member-role">Chairman</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="member-card">
+                    <div class="member-name">Dr. XXXXX XXXXX</div>
+                    <div class="member-role">Vice Chairman</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="member-card">
+                    <div class="member-name">Dr. XXXXX XXXXX</div>
+                    <div class="member-role">Secretary</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="member-card">
+                    <div class="member-name">Dr. XXXXX XXXXX</div>
+                    <div class="member-role">Joint Secretary</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="member-card">
+                    <div class="member-name">Dr. XXXXX XXXXX</div>
+                    <div class="member-role">Treasurer</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="member-card">
+                    <div class="member-name">Dr. XXXXX XXXXX</div>
+                    <div class="member-role">Executive Member</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min_1.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/functions.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".mobile-arrow").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).closest(".about-menu").find(".dropdown-menu").slideToggle();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

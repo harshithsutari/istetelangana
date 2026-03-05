@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Activities | ISTE Telangana Section</title>
+
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets for Header / Theme -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/lib.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        :root {
+            --iste-blue: #0c0474;
+            --iste-blue-alt: #0c0474a2;
+            --iste-maroon: #8C2138;
+            --bg-light: #f8f9fa;
+            --text-dark: #222;
+            --white: #ffffff;
+            --gray-light: #e9ecef;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* ===== LOGO SECTION (Same as Index) ===== */
+        .logo-wrapper {
+            background: #ffffff;
+            padding: 0px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .site-logo {
+            display: block;
+            margin: auto;
+            max-height: 110px;
+            width: auto;
+        }
+
+        @media(max-width:600px) {
+            .site-logo {
+                max-height: 80px;
+            }
+        }
+
+        /* ===== NAVBAR (Exact Index Color) ===== */
+        .ow-navigation {
+            background: #0c0474 !important;
+            border: 0px !important;
+            margin-bottom: 0px !important;
+        }
+
+        /* Sticky Navbar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        /* Center Menu */
+        .navbar-nav {
+            float: none !important;
+            display: inline-block;
+        }
+
+        /* Mobile submenu */
+        @media (max-width: 767px) {
+            .about-menu .dropdown-menu {
+                display: none;
+                background: #0c0474;
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-menu .dropdown-menu li a {
+                color: #fff;
+                padding: 10px 0;
+                display: block;
+            }
+
+            .mobile-arrow {
+                margin-left: 5px;
+                cursor: pointer;
+            }
+
+            .navbar-collapse {
+                background: #0c0474;
+            }
+        }
+
+        /* ===== MAROON BAR ===== */
+        .maroon-strip {
+            background: #FFF9C4;
+            /* Light Yellow */
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ECB200;
+        }
+
+        .scrolling-notification {
+            white-space: nowrap;
+            animation: scroll-left 20s linear infinite;
+            padding-left: 100%;
+            display: inline-block;
+        }
+
+        .scrolling-notification a {
+            color: #FF0000;
+            /* Red */
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* --- DYNAMIC CONTENT STYLING --- */
+        .events-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--iste-blue);
+            margin-bottom: 40px;
+        }
+
+        .section-title h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-title .divider {
+            width: 80px;
+            height: 4px;
+            background: var(--iste-maroon);
+            margin: 0 auto;
+        }
+
+        /* Categories View */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .category-folder {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-folder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--iste-maroon);
+        }
+
+        .folder-icon {
+            font-size: 50px;
+            color: var(--iste-blue);
+            margin-bottom: 20px;
+        }
+
+        .category-folder h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: var(--iste-blue);
+        }
+
+        /* Events List View */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .event-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            transition: border-color 0.3s;
+        }
+
+        .event-card:hover {
+            border-color: var(--iste-blue-alt);
+        }
+
+        .event-card h3 {
+            color: var(--iste-blue);
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            min-height: 3em;
+            line-height: 1.4;
+        }
+
+        .read-more-btn {
+            background: var(--iste-maroon);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            cursor: pointer;
+            width: fit-content;
+            transition: background 0.3s;
+            margin-top: auto;
+            border-radius: 4px;
+        }
+
+        .read-more-btn:hover {
+            background: #6d1a2b;
+        }
+
+        /* Details View */
+        .details-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            color: var(--iste-maroon);
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 1rem;
+        }
+
+        .event-detail-header {
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .event-year {
+            background: var(--iste-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .event-photo-frame {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .event-photo-frame img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .site-logo {
+                max-height: 60px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: var(--iste-blue);
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .nav-item {
+                width: 100%;
+                text-align: left;
+            }
+
+            .dropdown-menu {
+                position: static;
+                display: none;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-item.active .dropdown-menu {
+                display: block;
+            }
+
+            .details-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="container-fluid no-padding">
+        <div class="logo-wrapper">
+            <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Section Logo">
+        </div>
+
+        <div class="container-fluid no-padding sticky-nav">
+            <nav class="navbar navbar-default ow-navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse text-center" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown about-menu">
+                            <a href="introduction.html">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="introduction.html">Introduction</a></li>
+                                <li><a href="objective.html">ISTE Objective</a></li>
+                                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
+                                <li><a href="management.html">Management</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="committee.html">Committee</a></li>
+                        <li class="active"><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="awards.html">Awards</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="maroon-strip">
+        <div class="scrolling-notification">
+            <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for
+                upcoming technical workshops and events.</a>
+        </div>
+    </div>
+
+    <main class="events-container">
+        <!-- View 1: Category Folders -->
+        <div id="category-view" class="content-section active">
+            <div class="section-title">
+                <h1>Events & Activities</h1>
+                <div class="divider"></div>
+            </div>
+            <div class="categories-grid" id="categories-container">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+
+        <!-- View 2: List of Events in a Category -->
+        <div id="events-list-view" class="content-section">
+            <button class="back-btn" onclick="showView('category-view')">← Back to Categories</button>
+            <div class="section-title">
+                <h1 id="selected-category-title">Activities</h1>
+                <div class="divider"></div>
+            </div>
+            <div class="events-grid" id="events-container">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+
+        <!-- View 3: Specific Event Details -->
+        <div id="details-view" class="content-section">
+            <button class="back-btn" id="details-back-btn">← Back to List</button>
+            <div class="details-container">
+                <div class="event-detail-header">
+                    <span class="event-year" id="detail-year"></span>
+                    <h1 id="detail-title" style="color: var(--iste-blue); margin-top: 15px; font-size: 1.8rem;"></h1>
+                </div>
+
+                <div id="detail-gallery" class="gallery-grid">
+                    <!-- Dynamically populated photos -->
+                </div>
+
+                <div id="detail-content" style="font-size: 1.05rem; color: #444; line-height: 1.8;">
+                    <!-- Dynamically populated text -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/lib.js"></script>
+    <script src="js/functions.js"></script>
+    <script>
+        const eventData = [
+            {
+                id: 'inaugurations',
+                title: 'Inaugurations & Section Activities',
+                icon: '📁',
+                items: [
+                    {
+                        title: "Inauguration of ISTE Chapter at Nalla Narasimha Reddy Education Society's Group of Institutions (NNRG)",
+                        year: '2015',
+                        images: ['event1.jpeg', 'event11.jpeg'],
+                        detail: `
+                        <p>The ISTE Chapter of Nalla Narasimha Reddy Education Society's Group of Institutions (NNRG), Hyderabad was inaugurated on <strong>13th February, 2015</strong>.</p>
+                        <p><strong>Chief Guest:</strong> Dr. T. Kishen Kumar Reddy, Rector, JNTUH & Chairman, ISTE Telangana Section. He delivered an enlightening lecture on <em>"Role of Professional Societies in Technical Education"</em> and highlighted the contributions of ISTE to technical education.</p>
+                        <p><strong>Key Attendees:</strong></p>
+                        <ul>
+                            <li>Sri. Nalla Narasimha Reddy (Secretary, NNRG)</li>
+                            <li>Dr. C.V. Krishna Reddy (Director, NNRG)</li>
+                            <li>Dr. B. Gopal Reddy (Academic Director, NNRG)</li>
+                            <li>Dr. G. Janardhana Raju (Dean, School of Engineering, NNRG)</li>
+                        </ul>
+                        <p>A total of 35 faculty members and 415 students attended the celebrations, marking a significant step for professional networking in the institution.</p>
+                    `
+                    },
+                    {
+                        title: 'Inauguration of ISTE Students’ Chapter at SIET',
+                        year: '2015',
+                        detail: '<p>The student chapter launch at SIET aimed to foster technical growth, leadership skills, and student participation in national level technical competitions.</p>'
+                    },
+                    {
+                        title: 'Inauguration of ISTE Students’ Chapter at JBREC',
+                        year: '2015',
+                        detail: '<p>Joginpally B.R. Engineering College established its ISTE Students’ Chapter to bridge the gap between academic learning and industry requirements.</p>'
+                    }
+                ]
+            },
+            {
+                id: 'academic',
+                title: 'Academic & Technical Events',
+                icon: '🎓',
+                items: [
+                    {
+                        title: 'ISTE STTP at Methodist College',
+                        year: '2015',
+                        detail: '<p>A Short Term Training Program focused on advanced pedagogical techniques and integrating technology in classroom teaching.</p>'
+                    },
+                    {
+                        title: 'Lecture on MEMS, RF Circuits and Circuit Level Design',
+                        year: '2015',
+                        detail: '<p>An expert-led technical session exploring the latest trends in micro-systems and high-frequency circuit design.</p>'
+                    }
+                ]
+            },
+            {
+                id: 'conventions',
+                title: 'Conventions & Reports',
+                icon: '📑',
+                items: [
+                    {
+                        title: '10th ISTE AP & TS Section Annual Convention',
+                        year: '2015',
+                        detail: '<p>A landmark joint convention for both states focusing on the future of technical education in the newly formed state of Telangana.</p>'
+                    },
+                    {
+                        title: '4th ISTE Telangana State Level Students Convention',
+                        year: '2019',
+                        detail: '<p>The premier student gathering in the state featuring technical paper presentations, workshops, and keynote talks from industry leaders.</p>'
+                    }
+                ]
+            }
+        ];
+
+        function showView(viewId) {
+            $('.content-section').removeClass('active');
+            $(`#${viewId}`).addClass('active');
+            window.scrollTo(0, 0);
+        }
+
+        function init() {
+            const catContainer = $('#categories-container').empty();
+            eventData.forEach(cat => {
+                const folder = $(`
+                <div class="category-folder">
+                    <div class="folder-icon">${cat.icon}</div>
+                    <h3>${cat.title}</h3>
+                </div>
+            `);
+                folder.click(() => openCategory(cat));
+                catContainer.append(folder);
+            });
+        }
+
+        function openCategory(category) {
+            $('#selected-category-title').text(category.title);
+            const container = $('#events-container').empty();
+            category.items.forEach(item => {
+                const card = $(`
+                <div class="event-card">
+                    <h3>${item.title}</h3>
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            `);
+                card.find('.read-more-btn').click(() => openDetails(item, category));
+                container.append(card);
+            });
+            showView('events-list-view');
+        }
+
+        function openDetails(item, category) {
+            $('#detail-title').text(item.title);
+            $('#detail-year').text(item.year);
+            $('#detail-content').html(item.detail);
+
+            const gallery = $('#detail-gallery').empty();
+            if (item.images && item.images.length > 0) {
+                item.images.forEach(imgName => {
+                    // In a real app, imgName would be a path. 
+                    // Using placeholders here to show the structure.
+                    gallery.append(`
+                    <div class="event-photo-frame">
+                        <img src="${imgName}" onerror="this.src='https://via.placeholder.com/400x250?text=Event+Photo'" alt="Event image">
+                    </div>
+                `);
+                });
+                gallery.show();
+            } else {
+                gallery.hide();
+            }
+
+            // Set back button to return to the correct list
+            $('#details-back-btn').off('click').on('click', () => showView('events-list-view'));
+            showView('details-view');
+        }
+
+        $(document).ready(function () {
+            init();
+            $("#mobile-toggle").click(function () { $("#nav-list").toggleClass("active"); });
+        });
+    </script>
+</body>
+
+</html>

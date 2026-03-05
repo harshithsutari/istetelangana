@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | ISTE Telangana Section</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/lib.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        /* ===== LOGO SECTION (Same as Index) ===== */
+        .logo-wrapper {
+            background: #ffffff;
+            padding: 0px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .site-logo {
+            display: block;
+            margin: auto;
+            max-height: 110px;
+            width: auto;
+        }
+
+        @media(max-width:600px) {
+            .site-logo {
+                max-height: 80px;
+            }
+        }
+
+        /* ===== NAVBAR (Exact Index Color) ===== */
+        .ow-navigation {
+            background: #0c0474 !important;
+            border: 0px !important;
+            margin-bottom: 0px !important;
+        }
+
+        /* Sticky Navbar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        /* Center Menu */
+        .navbar-nav {
+            float: none !important;
+            display: inline-block;
+        }
+
+        /* Mobile submenu */
+        @media (max-width: 767px) {
+            .about-menu .dropdown-menu {
+                display: none;
+                background: #0c0474;
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-menu .dropdown-menu li a {
+                color: #fff;
+                padding: 10px 0;
+                display: block;
+            }
+
+            .mobile-arrow {
+                margin-left: 5px;
+                cursor: pointer;
+            }
+
+            .navbar-collapse {
+                background: #0c0474;
+            }
+        }
+
+        /* ===== MAROON BAR ===== */
+        .maroon-strip {
+            background: #FFF9C4;
+            /* Light Yellow */
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ECB200;
+        }
+
+        .scrolling-notification {
+            white-space: nowrap;
+            animation: scroll-left 20s linear infinite;
+            padding-left: 100%;
+            display: inline-block;
+        }
+
+        .scrolling-notification a {
+            color: #FF0000;
+            /* Red */
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-wrapper {
+            background: #ffffff;
+            padding: 60px 0;
+        }
+
+        .main-box {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        .contact-info h4 {
+            color: #0c0474;
+        }
+
+        .form-title {
+            background: #f1ead7;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            margin: 40px 0 30px 0;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        .submit-btn {
+            background: #0c0474;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        /* Footer */
+        .gold-line {
+            height: 5px;
+            background: #ECB200;
+        }
+
+        .footer-section {
+            background: #1c1c1c;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="container-fluid no-padding">
+        <div class="logo-wrapper">
+            <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Section Logo">
+        </div>
+
+        <div class="container-fluid no-padding sticky-nav">
+            <nav class="navbar navbar-default ow-navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse text-center" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown about-menu">
+                            <a href="introduction.html">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="introduction.html">Introduction</a></li>
+                                <li><a href="objective.html">ISTE Objective</a></li>
+                                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
+                                <li><a href="management.html">Management</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="committee.html">Committee</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="awards.html">Awards</a></li>
+                        <li class="active"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="maroon-strip">
+        <div class="scrolling-notification">
+            <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for
+                upcoming technical workshops and events.</a>
+        </div>
+    </div>
+
+
+    <!-- ===== CONTACT CONTENT ===== -->
+    <div class="contact-wrapper">
+        <div class="main-box">
+
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+
+                <p><strong>ISTE TELANGANA SECTION</strong><br>
+                    JNTUH Kukatpally,<br>
+                    Hyderabad - 500085,<br>
+                    Telangana, India</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>
+                    ✉ istetelangana@gmail.com<br>
+                    info@istetelangana.in<br>
+                    secretary@istetelangana.in
+                </p>
+            </div>
+
+            <div style="margin:30px 0;">
+                <iframe src="https://www.google.com/maps?q=JNTUH%20Kukatpally%20Hyderabad&output=embed" width="100%"
+                    height="300" style="border:0;" loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="form-title">Customer Complaint Form</div>
+
+            <form action="admin.html" method="GET">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="last_name" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+
+                <select name="reason" required>
+                    <option value="">Choose your reason</option>
+                    <option>Membership Issue</option>
+                    <option>Payment Related</option>
+                    <option>Certificate Issue</option>
+                    <option>Technical Issue</option>
+                    <option>Other</option>
+                </select>
+
+                <textarea name="message" placeholder="Please provide details" required></textarea>
+
+                <button type="submit" class="submit-btn">
+                    Submit Complaint
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery.min_1.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/functions.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".mobile-arrow").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).closest(".about-menu").find(".dropdown-menu").slideToggle();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

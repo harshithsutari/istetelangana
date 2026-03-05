@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ISTE Telangana Section</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/lib.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== GLOBAL ===== */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== HEADER ===== */
+        .logo-wrapper {
+            background: #ffffff;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .site-logo {
+            display: block;
+            margin: auto;
+            max-height: 110px;
+            width: auto;
+        }
+
+        @media(max-width:600px) {
+            .site-logo {
+                max-height: 80px;
+            }
+        }
+
+        .ow-navigation {
+            background: #0c0474 !important;
+            border: 0px !important;
+            margin-bottom: 0px !important;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .navbar-nav {
+            float: none !important;
+            display: inline-block;
+        }
+
+        @media (max-width: 767px) {
+            .about-menu .dropdown-menu {
+                display: none;
+                background: #0c0474;
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+
+            .about-menu .dropdown-menu li a {
+                color: #fff;
+                padding: 10px 0;
+                display: block;
+            }
+
+            .mobile-arrow {
+                margin-left: 5px;
+                cursor: pointer;
+            }
+
+            .navbar-collapse {
+                background: #0c0474;
+            }
+        }
+
+        .maroon-strip {
+            background: #FFF9C4;
+            /* Light Yellow */
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ECB200;
+        }
+
+        .scrolling-notification {
+            white-space: nowrap;
+            animation: scroll-left 20s linear infinite;
+            padding-left: 100%;
+            display: inline-block;
+        }
+
+        .scrolling-notification a {
+            color: #FF0000;
+            /* Red */
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* ===== MAIN SECTION ===== */
+        .main-section {
+            background: #ffffff;
+            padding: 50px 40px;
+        }
+
+        .main-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #800000;
+            margin-bottom: 25px;
+        }
+
+        .welcome-content p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #333;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .highlight-line {
+            font-weight: 500;
+            color: #000;
+        }
+
+        /* PERFECTLY ALIGNED STATS COUNTER */
+        .stats-section {
+            background: linear-gradient(135deg, #800000 0%, #8C2138 100%);
+            padding: 12px 0;
+            margin: 0 0 30px 0;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .stat-wrapper {
+            flex: 1;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .stat-item {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* ANNOUNCEMENTS SECTION */
+        .announcements-section {
+            background: #f8f9fa;
+            padding: 35px 0;
+            border-radius: 12px;
+            margin: 0 0 40px 0;
+            border-left: 5px solid #800000;
+        }
+
+        .announcement-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #800000;
+            text-align: center;
+        }
+
+        .announcement-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* FIXED: PERFECT TRAINING SECTION ALIGNMENT */
+        .training-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px 0;
+            border-radius: 12px;
+            margin: 0 0 40px 0;
+            border-top: 4px solid #800000;
+        }
+
+        .training-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #800000;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .training-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s ease;
+            border-left: 5px solid #800000;
+            height: 100%;
+            /* Equal height cards */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .training-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .training-card h5 {
+            color: #800000;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            flex-grow: 1;
+        }
+
+        .training-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-small {
+            font-size: 14px !important;
+            padding: 12px 24px !important;
+            min-width: 140px;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0 0 0;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            flex: 1;
+            min-width: 130px;
+            background: linear-gradient(45deg, #800000, #a32c3e);
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(128, 0, 0, 0.3);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(128, 0, 0, 0.4);
+            color: white !important;
+            text-decoration: none;
+        }
+
+        /* SLIDER - TRUE FADE IN / FADE OUT EFFECT */
+        #homeSlider.carousel-fade .carousel-inner>.item {
+            -webkit-transition: opacity 0.6s ease-in-out;
+            -moz-transition: opacity 0.6s ease-in-out;
+            -o-transition: opacity 0.6s ease-in-out;
+            transition: opacity 0.6s ease-in-out;
+            opacity: 0;
+            left: 0 !important;
+            /* Forces items to stay in place instead of sliding */
+            transform: none !important;
+        }
+
+        #homeSlider.carousel-fade .carousel-inner>.item.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* Fade out previous slide */
+        #homeSlider.carousel-fade .carousel-inner>.item.active.left,
+        #homeSlider.carousel-fade .carousel-inner>.item.active.right {
+            opacity: 0;
+            z-index: 1;
+        }
+
+        /* Prep next slide for fade in */
+        #homeSlider.carousel-fade .carousel-inner>.item.next,
+        #homeSlider.carousel-fade .carousel-inner>.item.prev {
+            opacity: 0;
+            z-index: 1;
+        }
+
+        /* Fade in new slide */
+        #homeSlider.carousel-fade .carousel-inner>.item.next.left,
+        #homeSlider.carousel-fade .carousel-inner>.item.prev.right {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .slider-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .announcement-btn {
+            display: block;
+            background: #ffffff;
+            color: #333;
+            text-decoration: none;
+            padding: 18px 25px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            font-size: 15px;
+            border-left: 5px solid #800000;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .announcement-btn:hover {
+            background: #800000;
+            color: #ffffff;
+            transform: translateX(10px);
+            text-decoration: none;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 991px) {
+            .main-row {
+                display: block !important;
+                text-align: center;
+            }
+
+            .slider-img {
+                height: 280px;
+                margin: 25px 0;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .stat-item {
+                font-size: 20px;
+            }
+
+            .training-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .main-section {
+                padding: 30px 20px;
+            }
+
+            .stats-section {
+                padding: 10px 0;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="container-fluid no-padding">
+        <div class="logo-wrapper">
+            <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Section Logo">
+        </div>
+
+        <div class="container-fluid no-padding sticky-nav">
+            <nav class="navbar navbar-default ow-navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse text-center" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="dropdown about-menu">
+                            <a href="introduction.html">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="introduction.html">Introduction</a></li>
+                                <li><a href="objective.html">ISTE Objective</a></li>
+                                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
+                                <li><a href="management.html">Management</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="committee.html">Committee</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="awards.html">Awards</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="maroon-strip">
+        <div class="scrolling-notification">
+            <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for
+                upcoming technical workshops and events.</a>
+        </div>
+    </div>
+
+    <section class="main-section">
+        <div class="container-fluid">
+
+            <div class="stats-section">
+                <div class="stats-container">
+                    <div class="stat-wrapper">
+                        <div class="stat-item" data-target="50">0</div>
+                        <div class="stat-label">Institutions</div>
+                    </div>
+                    <div class="stat-wrapper">
+                        <div class="stat-item" data-target="2000">0</div>
+                        <div class="stat-label">Faculty Trained</div>
+                    </div>
+                    <div class="stat-wrapper">
+                        <div class="stat-item" data-target="15">0</div>
+                        <div class="stat-label">Workshops/Year</div>
+                    </div>
+                    <div class="stat-wrapper">
+                        <div class="stat-item" data-target="5000">0</div>
+                        <div class="stat-label">Student Members</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row main-row">
+                <div class="col-md-5">
+                    <h2 class="section-title">Welcome to ISTE Telangana Section</h2>
+                    <div class="welcome-content">
+                        <p>The Indian Society for Technical Education (ISTE) is a national professional non-profit
+                            society registered under the Societies Registration Act of 1860.</p>
+                        <p>ISTE Telangana Section promotes innovation, research, academic excellence and professional
+                            development across engineering and technical institutions.</p>
+                        <p>Through training programmes, faculty development initiatives, annual conventions and student
+                            activities, the Section strengthens technical education throughout the state.</p>
+                        <p class="highlight-line">We strive to build a collaborative platform for educators,
+                            institutions and students to innovate and grow together.</p>
+                    </div>
+                    <div class="action-buttons">
+
+                        <a href="events.html" class="action-btn">View Events</a>
+                        <a href="contact.html" class="action-btn">Get Support</a>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div id="homeSlider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="1500">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="slide1.jpeg" class="img-responsive slider-img" alt="ISTE Telangana Event">
+                            </div>
+                            <div class="item">
+                                <img src="slide2.jpeg" class="img-responsive slider-img" alt="Technical Workshop">
+                            </div>
+                            <div class="item">
+                                <img src="slide3.jpeg" class="img-responsive slider-img" alt="Faculty Development">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="announcements-section">
+                <div class="announcement-grid">
+                    <h3 class="announcement-title">📢 Latest Announcements</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#" class="announcement-btn">🔥 AI Training Programme – March 20</a>
+                            <a href="#" class="announcement-btn">📅 National Conference – April 10</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" class="announcement-btn">🎓 Faculty Development Workshop</a>
+                            <a href="#" class="announcement-btn">⏰ Membership Renewal Notice</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="training-section">
+                <h3 class="training-title">🎯 Upcoming Training Programs</h3>
+                <div class="training-grid">
+
+                    <div class="training-card">
+                        <h5>IoT & Embedded Systems</h5>
+                        <p>Hands-on training on Arduino, Raspberry Pi, sensors, and IoT cloud integration for technical
+                            faculty.</p>
+                        <a href="#" class="action-btn btn-small">Register Now</a>
+                    </div>
+
+                    <div class="training-card">
+                        <h5>Cybersecurity Essentials</h5>
+                        <p>Network security, ethical hacking, and cybersecurity best practices workshop for educators.
+                        </p>
+                        <a href="#" class="action-btn btn-small">Register Now</a>
+                    </div>
+
+                    <div class="training-card">
+                        <h5>AI & Machine Learning</h5>
+                        <p>Comprehensive 5-day workshop on AI fundamentals, Python programming, and ML algorithms for
+                            faculty.</p>
+                        <a href="#" class="action-btn btn-small">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div style="width:100%;height:5px;background:#ECB200"></div>
+
+    <div class="footer-section container-fluid no-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 style="color:white;">About ISTE Telangana</h4>
+                    <p style="color:white;">The ISTE Telangana Section works to promote quality technical education,
+                        innovation and professional growth among institutions and students.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color:white;">Quick Links</h4>
+                    <p><a href="committee.html" style="color:white;">Committee</a></p>
+                    <p><a href="events.html" style="color:white;">Events</a></p>
+                    <p><a href="contact.html" style="color:white;">Contact Us</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color:white;">Contact</h4>
+                    <p style="color:white;">
+                        ISTE Telangana Section<br>
+                        📧 <a href="mailto:info@istetelangana.org" style="color:#ECB200;">info@istetelangana.org</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min_1.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/slider.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Mobile menu
+            $(".mobile-arrow").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).closest(".about-menu").find(".dropdown-menu").slideToggle();
+            });
+
+            // Counter animation
+            function animateCounters() {
+                $('.stat-item').each(function () {
+                    const $el = $(this);
+                    if ($el.hasClass('animate')) return;
+
+                    const target = parseInt($el.attr('data-target'));
+                    const duration = 2500;
+                    let start = 0;
+                    const increment = target / (duration / 16);
+
+                    const timer = setInterval(() => {
+                        start += increment;
+                        if (start >= target) {
+                            $el.text(target).addClass('animate');
+                            clearInterval(timer);
+                        } else {
+                            $el.text(Math.floor(start));
+                        }
+                    }, 16);
+                });
+            }
+
+            // Trigger counter on scroll
+            $(window).on('scroll load', function () {
+                const statsTop = $('.stats-section').offset().top;
+                const windowBottom = $(window).scrollTop() + $(window).height();
+                if (statsTop < windowBottom - 50) {
+                    animateCounters();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
