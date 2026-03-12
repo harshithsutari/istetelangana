@@ -30,7 +30,6 @@
             line-height: 1.6;
         }
 
-        /* ===== HEADER ===== */
         .logo-wrapper {
             background: #ffffff;
             text-align: center;
@@ -95,7 +94,6 @@
 
         .maroon-strip {
             background: #FFF9C4;
-            /* Light Yellow */
             height: 40px;
             width: 100%;
             overflow: hidden;
@@ -113,7 +111,6 @@
 
         .scrolling-notification a {
             color: #FF0000;
-            /* Red */
             font-weight: bold;
             text-decoration: none;
             font-size: 16px;
@@ -122,16 +119,9 @@
         }
 
         @keyframes scroll-left {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
-
-        /* CONTENT SECTION (NO BOX CONTAINER) */
 
         .content-section {
             max-width: 1000px;
@@ -175,94 +165,132 @@
 
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header class="container-fluid no-padding">
-        <div class="logo-wrapper">
-            <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Section Logo">
-        </div>
-
-        <div class="container-fluid no-padding sticky-nav">
-            <nav class="navbar navbar-default ow-navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse text-center" id="navbar">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown about-menu">
-                            <a href="introduction.html">About</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="introduction.html">Introduction</a></li>
-                                <li><a href="objective.html">ISTE Objective</a></li>
-                                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
-                                <li class="active"><a href="management.html">Management</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="committee.html">Committee</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="awards.html">Awards</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="maroon-strip">
-        <div class="scrolling-notification">
-            <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for
-                upcoming technical workshops and events.</a>
-        </div>
+<header class="container-fluid no-padding">
+    <div class="logo-wrapper">
+        <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Section Logo">
     </div>
 
-    <main>
-        <section class="content-section">
-            <h1>ISTE Telangana Section – Management</h1>
-
-            <div class="member-card">
-                <h3>Chairman</h3>
-                <p>Prof. A. Venugopal Reddy<br>
-                    Vice Chancellor, JNTU Hyderabad</p>
+    <div class="container-fluid no-padding sticky-nav">
+        <nav class="navbar navbar-default ow-navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
 
-            <div class="member-card">
-                <h3>Vice Chairman</h3>
-                <p>Dr. D. N. Reddy<br>
-                    Former Chairman, RAC DRDO & Member UGC</p>
-            </div>
+            <div class="navbar-collapse collapse text-center" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
 
-            <div class="member-card">
-                <h3>Secretary</h3>
-                <p>Dr. G. Chakraverti<br>
-                    Director (R&D), Mahaveer Institute of Science and Technology</p>
-            </div>
+                    <li class="dropdown about-menu">
+                        <a href="introduction.html">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="introduction.html">Introduction</a></li>
+                            <li><a href="objective.html">ISTE Objective</a></li>
+                            <li><a href="code_of_conduct.html">Code of Conduct</a></li>
+                            <li class="active"><a href="management.html">Management</a></li>
+                        </ul>
+                    </li>
 
-            <div class="member-card">
-                <h3>Treasurer</h3>
-                <p>Prof. V. Rama Rao<br>
-                    Consultant, Centre for Good Governance</p>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
+        </nav>
+    </div>
+</header>
 
-            <div class="member-card">
-                <h3>Executive Members</h3>
-                <p>
-                    Dr. G. Venkata Subbaiah<br>
-                    Dr. Y. Padma Sai<br>
-                    Dr. P. Venkata Ramana<br>
-                    Dr. R. Ram Bhupal Reddy<br>
-                    Dr. G. Raghu Babu<br>
-                    Prof. Prakash J. Patil
-                </p>
-            </div>
+<div class="maroon-strip">
+    <div class="scrolling-notification">
+        <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for upcoming technical workshops and events.</a>
+    </div>
+</div>
 
-        </section>
-    </main>
+<main>
+<section class="content-section">
+
+<h1>ISTE Telangana Section – Management</h1>
+
+<div class="member-card">
+<h3>Chairman</h3>
+<p>Prof. A. Venugopal Reddy<br>
+Vice Chancellor, JNTU Hyderabad</p>
+</div>
+
+<div class="member-card">
+<h3>Vice Chairman</h3>
+<p>Dr. D. N. Reddy<br>
+Former Chairman, RAC DRDO & Member UGC</p>
+</div>
+
+<div class="member-card">
+<h3>Secretary</h3>
+<p>Dr. G. Chakraverti<br>
+Director (R&D), Mahaveer Institute of Science and Technology</p>
+</div>
+
+<div class="member-card">
+<h3>Treasurer</h3>
+<p>Prof. V. Rama Rao<br>
+Consultant, Centre for Good Governance</p>
+</div>
+
+<div class="member-card">
+<h3>Executive Members</h3>
+<p>
+Dr. G. Venkata Subbaiah<br>
+Dr. Y. Padma Sai<br>
+Dr. P. Venkata Ramana<br>
+Dr. R. Ram Bhupal Reddy<br>
+Dr. G. Raghu Babu<br>
+Prof. Prakash J. Patil
+</p>
+</div>
+
+</section>
+</main>
+
+<!-- Footer Top Border -->
+<div style="width:100%;height:5px;background:#ECB200"></div>
+
+<!-- Footer Section -->
+<div class="footer-section container-fluid no-padding" style="background:#0c0474;padding:40px 0;">
+<div class="container">
+<div class="row">
+
+<div class="col-md-4">
+<h4 style="color:white;">About ISTE Telangana</h4>
+<p style="color:white;">
+The ISTE Telangana Section works to promote quality technical education,
+innovation and professional growth among institutions and students.
+</p>
+</div>
+
+<div class="col-md-4">
+<h4 style="color:white;">Quick Links</h4>
+<p><a href="committee.html" style="color:white;">Committee</a></p>
+<p><a href="events.html" style="color:white;">Events</a></p>
+<p><a href="contact.html" style="color:white;">Contact Us</a></p>
+</div>
+
+<div class="col-md-4">
+<h4 style="color:white;">Contact</h4>
+<p style="color:white;">
+ISTE Telangana Section<br>
+📧 <a href="mailto:info@istetelangana.org" style="color:#ECB200;">
+info@istetelangana.org
+</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
 
 </body>
-
 </html>

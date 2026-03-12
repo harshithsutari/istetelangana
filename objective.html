@@ -21,7 +21,6 @@
             color: #222;
         }
 
-        /* ===== INTRO CONTENT ===== */
         .intro-container {
             margin: 40px auto;
             max-width: 1000px;
@@ -33,7 +32,6 @@
 
         .maroon-strip {
             background: #FFF9C4;
-            /* Light Yellow */
             height: 40px;
             width: 100%;
             overflow: hidden;
@@ -51,7 +49,6 @@
 
         .scrolling-notification a {
             color: #FF0000;
-            /* Red */
             font-weight: bold;
             text-decoration: none;
             font-size: 16px;
@@ -60,13 +57,8 @@
         }
 
         @keyframes scroll-left {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
 
         .intro-section h2 {
@@ -91,7 +83,6 @@
             font-size: 1.05rem;
         }
 
-        /* ===== LOGO SECTION (Same as Introduction) ===== */
         .logo-wrapper {
             background: #ffffff;
             padding: 0px 0;
@@ -112,13 +103,11 @@
             }
         }
 
-        /* Navbar */
         .ow-navigation {
             background: #0c0474 !important;
             border: none;
         }
 
-        /* Mobile dropdown */
         @media(max-width:767px) {
 
             .about-menu .dropdown-menu {
@@ -149,111 +138,138 @@
 
 <body>
 
-    <header class="container-fluid no-padding">
+<header class="container-fluid no-padding">
 
-        <!-- WHITE LOGO SECTION -->
-        <div class="logo-wrapper">
-            <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Logo">
-        </div>
-
-        <!-- NAVBAR -->
-        <div class="container-fluid no-padding sticky-nav">
-            <nav class="navbar navbar-default ow-navigation">
-
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="navbar-collapse collapse text-center" id="navbar">
-                    <ul class="nav navbar-nav">
-
-                        <li><a href="index.html">Home</a></li>
-
-                        <li class="dropdown about-menu">
-                            <a href="introduction.html">
-                                About
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="introduction.html">Introduction</a></li>
-                                <li><a href="objective.html">ISTE Objective</a></li>
-                                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
-                                <li><a href="management.html">Management</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="committee.html">Committee</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="awards.html">Awards</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-
-                    </ul>
-                </div>
-
-            </nav>
-        </div>
-
-    </header>
-
-    <!-- MAROON BAR -->
-    <div class="maroon-strip">
-        <div class="scrolling-notification">
-            <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for
-                upcoming technical workshops and events.</a>
-        </div>
-    </div>
-    <!-- PAGE CONTENT -->
-    <div class="container intro-container intro-section">
-
-        <!-- OBJECTIVE CONTENT -->
-
-        <h1 style="color:#0c0474; font-weight:700; text-align:center;">
-            ISTE Objectives
-        </h1>
-
-        <p style="text-align:center; margin-bottom:30px;">
-            Empowering the Technical Education Ecosystem
-        </p>
-
-        <h2>Primary Objectives</h2>
-
-        <ul class="objective-list">
-            <li>To provide quality training programs to teachers and administrators of technical institutions.</li>
-            <li>To assist in developing professional engineers and technicians required by industry and organizations.
-            </li>
-            <li>To provide guidance and training to students for better learning and personality development.</li>
-            <li>To enhance the status of the teaching profession and promote professional ethics.</li>
-            <li>To contribute to curriculum development and technical education policy.</li>
-            <li>To promote research and development in technical education.</li>
-        </ul>
-
-        <h2>Strategic Goals</h2>
-
-        <p>
-            The ISTE Telangana Section actively works to realize these objectives by fostering academic exchange,
-            professional development programs, and meaningful collaboration between institutions and industry.
-        </p>
-
+    <div class="logo-wrapper">
+        <img src="images/ISTE-TEL.jpeg" class="site-logo" alt="ISTE Telangana Logo">
     </div>
 
-    <script src="js/jquery.min_1.js"></script>
-    <script src="js/lib.js"></script>
-    <script src="js/functions.js"></script>
+    <div class="container-fluid no-padding sticky-nav">
+        <nav class="navbar navbar-default ow-navigation">
 
-    <script>
-        $(document).ready(function () {
-            $(".mobile-arrow").click(function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                $(this).closest(".about-menu").find(".dropdown-menu").slideToggle();
-            });
-        });
-    </script>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse text-center" id="navbar">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="dropdown about-menu">
+                        <a href="introduction.html">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="introduction.html">Introduction</a></li>
+                            <li><a href="objective.html">ISTE Objective</a></li>
+                            <li><a href="code_of_conduct.html">Code of Conduct</a></li>
+                            <li><a href="management.html">Management</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+</header>
+
+<div class="maroon-strip">
+    <div class="scrolling-notification">
+        <a href="events.html">📢 New Notification: Admissions are open for the 2026 Academic Year! Register now for upcoming technical workshops and events.</a>
+    </div>
+</div>
+
+<div class="container intro-container intro-section">
+
+    <h1 style="color:#0c0474; font-weight:700; text-align:center;">
+        ISTE Objectives
+    </h1>
+
+    <p style="text-align:center; margin-bottom:30px;">
+        Empowering the Technical Education Ecosystem
+    </p>
+
+    <h2>Primary Objectives</h2>
+
+    <ul class="objective-list">
+        <li>To provide quality training programs to teachers and administrators of technical institutions.</li>
+        <li>To assist in developing professional engineers and technicians required by industry and organizations.</li>
+        <li>To provide guidance and training to students for better learning and personality development.</li>
+        <li>To enhance the status of the teaching profession and promote professional ethics.</li>
+        <li>To contribute to curriculum development and technical education policy.</li>
+        <li>To promote research and development in technical education.</li>
+    </ul>
+
+    <h2>Strategic Goals</h2>
+
+    <p>
+        The ISTE Telangana Section actively works to realize these objectives by fostering academic exchange,
+        professional development programs, and meaningful collaboration between institutions and industry.
+    </p>
+
+</div>
+
+<!-- Footer Top Border -->
+<div style="width:100%;height:5px;background:#ECB200"></div>
+
+<!-- Footer Section -->
+<div class="footer-section container-fluid no-padding" style="background:#0c0474;padding:40px 0;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h4 style="color:white;">About ISTE Telangana</h4>
+                <p style="color:white;">
+                    The ISTE Telangana Section works to promote quality technical education,
+                    innovation and professional growth among institutions and students.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h4 style="color:white;">Quick Links</h4>
+                <p><a href="committee.html" style="color:white;">Committee</a></p>
+                <p><a href="events.html" style="color:white;">Events</a></p>
+                <p><a href="contact.html" style="color:white;">Contact Us</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <h4 style="color:white;">Contact</h4>
+                <p style="color:white;">
+                    ISTE Telangana Section<br>
+                    📧 <a href="mailto:info@istetelangana.org" style="color:#ECB200;">
+                        info@istetelangana.org
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min_1.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/functions.js"></script>
+
+<script>
+$(document).ready(function () {
+    $(".mobile-arrow").click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).closest(".about-menu").find(".dropdown-menu").slideToggle();
+    });
+});
+</script>
 
 </body>
-
 </html>
